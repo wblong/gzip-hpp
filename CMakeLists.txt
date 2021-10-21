@@ -32,4 +32,6 @@ add_subdirectory(extern)
 install(TARGETS zlib)
 install(FILES ${ZLIB_INCLUDE_HDRS} TYPE INCLUDE)
 
+add_subdirectory(examples)
+
 

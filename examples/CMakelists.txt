@@ -1,0 +1,18 @@
+add_executable(Demo "")
+
+target_sources(
+    Demo
+    PRIVATE
+       main.cpp
+)
+
+target_include_directories(
+    Demo
+    PRIVATE 
+        ${CMAKE_INSTALL_PREFIX}/include
+)
+
+target_link_libraries(Demo
+    PRIVATE
+        zlibstatic
+)

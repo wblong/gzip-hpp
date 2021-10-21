@@ -4,6 +4,9 @@ Gzip C++ lib for gzip compression and decompression. Extracted from [mapnik-vect
 [![hpp-skel badge](https://raw.githubusercontent.com/mapbox/cpp/master/assets/hpp-skel-badge_blue.svg)](https://github.com/mapbox/hpp-skel)
 
 ## Usage
+
+`examples/main.cpp`
+
 ```c++
 // Include the specific gzip headers your code needs, for example...
 #include <gzip/compress.hpp>
@@ -55,45 +58,8 @@ const char * compressed_pointer = compressed_data.data();
 std::string decompressed_data = gzip::decompress(compressed_pointer, compressed_data.size());
 
 ```
+## Build
 
-## Test
+![build](images/build.png)
 
-```shell
-# build test binaries
-make
-
-# run tests
-make test
-```
-
-You can make Release test binaries as well
-```shell
-BUILDTYPE=Release make
-BUILDTYPE=Release make test
-```
-
-## Versioning
-
-This library is semantically versioned using the /include/gzip/version.cpp file. This defines a number of macros that can be used to check the current major, minor, or patch versions, as well as the full version string.
-
-Here's how you can check for a particular version to use specific API methods
-```c++
-#if GZIP_VERSION_MAJOR > 2
-// use version 2 api
-#else
-// use older verion apis
-#endif
-```
-
-Here's how to check the version string
-```c++
-std::cout << "version: " << GZIP_VERSION_STRING << "/n";
-// => version: 0.2.0
-```
-
-And lastly, mathematically checking for a specific version:
-```c++
-#if GZIP_VERSION_CODE > 20001
-// use feature provided in v2.0.1
-#endif
-```
+![demo](images/demo.png)
