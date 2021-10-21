@@ -1,0 +1,13 @@
+prefix=E:/code/H3D/H3D/extern/gzip-hpp/ThirdParty
+exec_prefix=E:/code/H3D/H3D/extern/gzip-hpp/ThirdParty
+libdir=E:/code/H3D/H3D/extern/gzip-hpp/ThirdParty/lib
+sharedlibdir=E:/code/H3D/H3D/extern/gzip-hpp/ThirdParty/lib
+includedir=E:/code/H3D/H3D/extern/gzip-hpp/ThirdParty/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.8
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
